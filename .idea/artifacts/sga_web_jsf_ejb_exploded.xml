@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="sga-web-jsf:ejb exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/sga_web_jsf_ejb_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="sga-web-jsf/ejb/EJB" />
+      <element id="javaee-facet-classes" facet="sga-web-jsf/ejb/EJB" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sga-web-jsf:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sga-web-jsf.war">
+      <element id="artifact" artifact-name="sga-web-jsf:war exploded" />
+    </root>
+  </artifact>
+</component>

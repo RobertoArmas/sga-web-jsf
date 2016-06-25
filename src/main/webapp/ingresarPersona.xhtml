@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Ingresar Personas</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel id="panel" header="New Persona">
+
+            <p:messages id="msgs" />
+
+            <h:panelGrid columns="3" cellpadding="5">
+
+                <p:outputLabel for="nombre" value="Nombre:" />
+
+                <p:inputText id="nombre" value="#{personaBean.persona.nombre}" required="true" label="Nombre">
+                    <f:validateLength minimum="2" />
+                </p:inputText>
+                <p:message for="nombre" display="icon" />
+
+                <p:outputLabel for="apellido" value="apellido:" />
+
+                <p:inputText id="apellido" value="#{personaBean.persona.apePaterno}" label="Apellido" required="true">
+                    <f:validateLength minimum="2" />
+                </p:inputText>
+                <p:message for="apellido" id="msgApellido" display="icon" />
+
+                <p:outputLabel for="email" value="email" />
+
+                <p:inputText id="email" value="#{personaBean.persona.email}" label="Email" required="true">
+                    <f:validateLength minimum="2" />
+                </p:inputText>
+
+
+
+            </h:panelGrid>
+
+            <p:commandButton value="Save" update="panel"
+                             actionListener="#{personaBean.ingresarPersona}" icon="ui-icon-check" />
+            <p:commandButton value="Regresar" action="index" />
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
